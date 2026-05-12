@@ -1,4 +1,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Storage access for file_picker on Android ≤ 12 (API 32).
+         Android 13+ uses SAF — no permission needed. -->
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+
     <application
         android:label="${appName}"
         android:name="${applicationName}"
